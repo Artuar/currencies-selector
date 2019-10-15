@@ -29,7 +29,7 @@ export const CurrenciesList: React.FunctionComponent = () => {
     chosen ? remove(currency) : choose(currency);
 
   return (
-    <article id="currencies-list" className={styles.allCurrencies}>
+    <section id="currencies-list" className={styles.allCurrencies}>
       {allCurrencies.map(currency => {
         const chosen = chhosenCurrencies.indexOf(currency) !== -1;
         return (
@@ -46,6 +46,6 @@ export const CurrenciesList: React.FunctionComponent = () => {
           </button>
         );
       })}
-    </article>
+    </section>
   );
 };

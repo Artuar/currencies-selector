@@ -20,7 +20,7 @@ export const ChosenCurrencies: React.FunctionComponent = () => {
   const { remove } = useDispatchActions();
 
   return (
-    <article id="chosen-list" className={styles.chosenCurrencies}>
+    <section id="chosen-list" className={styles.chosenCurrencies}>
       {chosenCurrencies.map(currency => (
         <div
           id={`chosen-${currency}`}
@@ -33,6 +33,6 @@ export const ChosenCurrencies: React.FunctionComponent = () => {
           </button>
         </div>
       ))}
-    </article>
+    </section>
   );
 };

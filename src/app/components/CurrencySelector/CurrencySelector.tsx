@@ -5,9 +5,9 @@ import * as styles from "./CurrencySelector.css";
 
 export const CurrencySelector: React.FunctionComponent = () => {
   return (
-    <main className={styles.currencySelector}>
+    <article className={styles.currencySelector}>
       <ChosenCurrencies />
       <CurrenciesList />
-    </main>
+    </article>
   );
 };
