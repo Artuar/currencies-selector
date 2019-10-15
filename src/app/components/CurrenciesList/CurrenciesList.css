@@ -1,0 +1,39 @@
+.allCurrencies {
+  display: grid;
+  grid-template-columns: 133px 133px 133px;
+  grid-gap: 17px 8px;
+  padding: 11px 15px 15px 15px;
+}
+.chooseCurrency {
+  height: 33px;
+  display: flex;
+  align-items: center;
+  background: #ececec;
+  border: 1px solid #c2c2c2;
+  padding: 0 5px;
+  cursor: pointer;
+  outline: none;
+}
+.chooseCurrency:hover {
+  background: #dcdcdc;
+}
+.chooseCurrency.chosen {
+  background: #fff;
+}
+.chooseCurrency.chosen .indicator {
+  color: #ff0003;
+}
+.indicator {
+  border-radius: 3px;
+  border: 1px solid #c2c2c2;
+  width: 13px;
+  color: transparent;
+  height: 13px;
+  line-height: 12px;
+  font-weight: 700;
+}
+.name {
+  color: #003b6d;
+  font-size: 20px;
+  padding: 0 4px;
+}

@@ -1,0 +1,32 @@
+.chosenCurrencies {
+  display: grid;
+  grid-template-columns: 127px 127px 127px;
+  grid-gap: 8px 16px;
+  padding: 23px 16px;
+}
+.chosenCurrency {
+  height: 33px;
+  display: flex;
+  align-items: center;
+  background: #e5e5e5;
+  position: relative;
+  justify-content: center;
+}
+.remove {
+  background: #333333;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0 5px;
+}
+.remove:hover {
+  background: #fff;
+  border-color: #333333;
+  color: #333333;
+}
