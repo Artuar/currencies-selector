@@ -5,14 +5,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { chosenCurrenciesSelector } from "../../store/currencies/currencies.selector";
 
 const useStateSelectors = () => ({
-  chosenCurrencies: useSelector(chosenCurrenciesSelector),
+  chosenCurrencies: useSelector(chosenCurrenciesSelector)
 });
 
 const useDispatchActions = () => {
   const dispatch = useDispatch();
   return {
-    remove: (currency: string) =>
-      dispatch(currenciesActions.remove(currency)),
+    remove: (currency: string) => dispatch(currenciesActions.remove(currency))
   };
 };
 
@@ -22,13 +21,18 @@ export const ChosenCurrencies: React.FunctionComponent = () => {
 
   return (
     <article id="chosen-list" className={styles.chosenCurrencies}>
-    {
-      chosenCurrencies.map(currency =>
-        <div id={`chosen-${currency}`} key={`chosen-${currency}`} className={styles.chosenCurrency}>
+      {chosenCurrencies.map(currency => (
+        <div
+          id={`chosen-${currency}`}
+          key={`chosen-${currency}`}
+          className={styles.chosenCurrency}
+        >
           <span>{currency}</span>
-          <button className={styles.remove} onClick={() => remove(currency)}>x</button>
-        </div>)
-    }
+          <button className={styles.remove} onClick={() => remove(currency)}>
+            x
+          </button>
+        </div>
+      ))}
     </article>
   );
 };

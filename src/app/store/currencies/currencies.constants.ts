@@ -7,5 +7,5 @@ export const CURRENCIES: string[] = [
   "GBP",
   "SEK",
   "USD",
-  "RUB",
+  "RUB"
 ];

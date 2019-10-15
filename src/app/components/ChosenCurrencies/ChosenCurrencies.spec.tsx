@@ -4,7 +4,10 @@ import { Provider } from "react-redux";
 import { shallow, ReactWrapper, mount } from "enzyme";
 import configureMockStore from "redux-mock-store";
 import { CURRENCIES } from "../../store/currencies/currencies.constants";
-import { CurrenciesState, currenciesDefaultState } from "../../store/currencies/currencies.reducer";
+import {
+  CurrenciesState,
+  currenciesDefaultState
+} from "../../store/currencies/currencies.reducer";
 import * as currenciesActions from "../../store/currencies/currencies.actions";
 import * as ReactReduxHooks from "react-redux";
 
@@ -14,7 +17,9 @@ describe("CurrencyList", () => {
   let component: ReactWrapper;
 
   const mountComponent = (initialState: Partial<CurrenciesState> = {}) => {
-    store = mockStore({ currencies: { ...currenciesDefaultState, ...initialState } });
+    store = mockStore({
+      currencies: { ...currenciesDefaultState, ...initialState }
+    });
 
     jest
       .spyOn(ReactReduxHooks, "useDispatch")
@@ -50,5 +55,4 @@ describe("CurrencyList", () => {
     mountComponent({ chosen: [CURRENCIES[0], CURRENCIES[1]] });
     expect(component.find("#chosen-list button")).toHaveLength(2);
   });
-
 });

@@ -10,7 +10,7 @@ export interface CurrenciesState {
 
 export const currenciesDefaultState: CurrenciesState = {
   all: CURRENCIES,
-  chosen: [],
+  chosen: []
 };
 
 export const currenciesReducer = (
@@ -27,7 +27,9 @@ export const currenciesReducer = (
     case getType(actions.remove): {
       return {
         ...state,
-        chosen: [...state.chosen.filter(currency => currency !== action.payload)]
+        chosen: [
+          ...state.chosen.filter(currency => currency !== action.payload)
+        ]
       };
     }
     default:

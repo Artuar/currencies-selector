@@ -19,7 +19,6 @@ body {
   box-shadow: 1px 1px 1px #c2c2c2;
 }
 
-
 .allCurrencies {
   display: grid;
   grid-template-columns: 133px 133px 133px;
